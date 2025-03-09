@@ -1,7 +1,6 @@
 from sim_ur5.mujoco_env.sim_env import SimEnv
 from sim_ur5.motion_planning.motion_executor import MotionExecutor
 import cv2
-from time import sleep
 
 def relay_race(start_position):
     env = SimEnv()
