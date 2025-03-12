@@ -1,21 +1,3 @@
-Task Definition
-  - [X] Clear description of the chosen task
-  - [X] Identification of constraints and challenges
-
-Task Decomposition
-  - [X] Break down the complex task into basic operations
-  - [] Identify the critical path and potential bottlenecks
-
-Motion Planning Strategy
-  - [] Design movement sequences
-  - [] Consider obstacle avoidance
-
-Implementation Plan
-  - [] Develop modular code structure (pseudo code is sufficient)
-  - [] Include error handling and recovery
-  - [] Define success criteria
-
-
 # problem definition
 ## motivation
 when i was in boarding school there was a food hall, and at the end of each meal you had to
@@ -96,6 +78,8 @@ motion planning
 ## working code or pseudo code
 
 ## Error handling
+the error handling would be the constant monitoring to determine what is our state, and replan
+what the robot should do. for extreme cases we have a pause button.
 
 ## success criteria
 the robot is successful if
