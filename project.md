@@ -63,7 +63,9 @@ how we will address these challenges
 and the robot can replan it's movement when it sees it surroundings change.
 for other parts such as waste disposal, we'll add a pause button.
 - we can have more than one robot at each station to handle the extra work.
--
+- we can choose a gripper that can grip in many different ways to minimize the chance
+of having to pick up in a dirty surface, have a place to clean the gripper.
+we can also have a small hose to clean a place to grip.
 
 # technical documentation
 each stage of the technical documentation we'll do the for both robots
@@ -93,5 +95,11 @@ motion planning
 # implementation
 ## working code or pseudo code
 
+## Error handling
 
-## performance analysis
+## success criteria
+the robot is successful if
+- it can handle a tray in under 10 seconds
+- it for 99% of the time it doesn't need an intervention from a human
+- the foodware ends up clean, and sorted
+- it doesn't harm the people around it
