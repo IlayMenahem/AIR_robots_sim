@@ -25,18 +25,6 @@ def create_stack(block_positions, target_location):
 
         executor.wait(2)
 
-
-    frames = []
-    for _ in range(100):  # Capture 100 frames
-        frame = env.render(mode="rgb_array")  # Render the simulation frame
-        frames.append(frame)
-
-    # Save video
-    out = cv2.VideoWriter('stack_simulation.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, (640, 480))
-    for frame in frames:
-        out.write(frame)
-    out.release()
-
 # Example usage
 block_positions = [
     [-0.7, -0.6, 0.03],
