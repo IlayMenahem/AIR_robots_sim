@@ -1,9 +1,17 @@
 from sim_ur5.mujoco_env.sim_env import SimEnv
 from sim_ur5.motion_planning.motion_executor import MotionExecutor
-import cv2
-import numpy as np
 
-def create_stack(block_positions, target_location):
+def create_stack(block_positions: list[list[float]], target_location: list[float]) -> None:
+    '''
+    Stacks the blocks at the target location.
+
+    Args:
+        block_positions: The positions of the blocks to stack.
+        target_location: The location to stack the blocks.
+
+    Returns:
+        None
+    '''
     # Initialize the simulation environment and motion executor
     env = SimEnv()
     executor = MotionExecutor(env)

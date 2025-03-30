@@ -1,5 +1,3 @@
-#import typer
-import numpy as np
 from lab_ur5.motion_planning.motion_planner import MotionPlanner
 from lab_ur5.motion_planning.geometry_and_transforms import GeometryAndTransforms
 from lab_ur5.manipulation.manipulation_controller import ManipulationController
@@ -8,7 +6,18 @@ workspace_x_lim = [-1.0, 1]
 workspace_y_lim = [-1.0, 1]
 
 
-def relay_race(start_position, handover_position):
+def relay_race(start_position: list[float], handover_position: list[float]) -> None:
+    '''
+    Makes the first robot pick up a block and meet the second robot at the handover position.
+
+    Args:
+        start_position: The position of the block to pick up.
+        handover_position: The position to handover the block.
+
+    Returns:
+        None
+    '''
+
     motion_planner = MotionPlanner()
     gt = GeometryAndTransforms.from_motion_planner(motion_planner)
 
