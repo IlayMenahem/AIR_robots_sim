@@ -18,21 +18,8 @@ def relay_race(start_position):
     executor.moveJ("ur5e_2", joint_positions, speed=3)
     executor.moveJ("ur5e_1", joint_positions, speed=3)
 
-    # Wait for stability
     executor.wait(4)
 
-    # Record video (replace with your video recording logic)
-    frames = []
-    for _ in range(100):
-        frame = env.render()
-        frames.append(frame)
-
-    # Save video
-    save_video_path = os.path.join(os.getcwd(), 'relay_race_simulation.mp4')
-    out = cv2.VideoWriter(save_video_path, cv2.VideoWriter_fourcc(*'mp4v'), 30, (640, 480))
-    for frame in frames:
-        out.write(frame)
-    out.release()
 
 start_position = [-0.7, -0.8, 0.03]
 relay_race(start_position)
